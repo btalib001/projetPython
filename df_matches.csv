@@ -3,17 +3,17 @@ X2,X4,X5,X6,adversaire,score_france,score_adversaire,penalty_france,penalty_adve
 12 février 1905,France - Suisse,1-0,Match amical,Suisse,1,0,NA,NA,1905-02-12,1905,win,1
 7 mai 1905,Belgique - France,7-0,Match amical,Belgique,0,7,NA,NA,1905-05-07,1905,loss,2
 22 avril 1906,France - Belgique,0-5,Match amical,Belgique,0,5,NA,NA,1906-04-22,1906,loss,1
-1er novembre 1906,France - Angleterre,0-15,Match amical,Angleterre,0,1,NA,NA,1906-11-01,1906,loss,2
+1er novembre 1906,France - Angleterre,0-15,Match amical,Angleterre,0,15,NA,NA,1906-11-01,1906,loss,2
 21 avril 1907,Belgique - France,1-2,Match amical,Belgique,2,1,NA,NA,1907-04-21,1907,win,1
 8 mars 1908,Suisse - France,1-2,Match amical,Suisse,2,1,NA,NA,1908-03-08,1908,win,1
-23 mars 1908,Angleterre - France,12-0,Match amical,Angleterre,10,12,NA,NA,1908-03-23,1908,loss,2
+23 mars 1908,Angleterre - France,12-0,Match amical,Angleterre,0,12,NA,NA,1908-03-23,1908,loss,2
 12 avril 1908,France - Belgique,1-2,Match amical,Belgique,1,2,NA,NA,1908-04-12,1908,loss,3
 10 mai 1908,Pays-Bas - France,4-1,Match amical,Pays-Bas,1,4,NA,NA,1908-05-10,1908,loss,4
-22 octobre 1908,France - Danemark,1-17,Jeux olympiques 1908[40](Demi-finale),Danemark,1,1,NA,NA,1908-10-22,1908,draw,5
+22 octobre 1908,France - Danemark,1-17,Jeux olympiques 1908[40](Demi-finale),Danemark,1,17,NA,NA,1908-10-22,1908,loss,5
 8 mai 1909,Belgique - France,5-2,Match amical,Belgique,2,5,NA,NA,1909-05-08,1909,loss,1
-22 mai 1909,France - Angleterre,0-11,Match amical,Angleterre,0,1,NA,NA,1909-05-22,1909,loss,2
+22 mai 1909,France - Angleterre,0-11,Match amical,Angleterre,0,11,NA,NA,1909-05-22,1909,loss,2
 3 avril 1910,France - Belgique,0-4,Match amical,Belgique,0,4,NA,NA,1910-04-03,1910,loss,1
-16 avril 1910,Angleterre - France,10-1,Match amical,Angleterre,11,10,NA,NA,1910-04-16,1910,win,2
+16 avril 1910,Angleterre - France,10-1,Match amical,Angleterre,1,10,NA,NA,1910-04-16,1910,loss,2
 15 mai 1910,Italie - France,6-2,Match amical,Italie,2,6,NA,NA,1910-05-15,1910,loss,3
 1er janvier 1911,France - Hongrie,0-3,Match amical,Hongrie,0,3,NA,NA,1911-01-01,1911,loss,1
 23 mars 1911,France - Angleterre,0-3,Match amical,Angleterre,0,3,NA,NA,1911-03-23,1911,loss,2
@@ -76,7 +76,7 @@ Serbes, Croates et Slovènes",4,1,NA,NA,1926-06-14,1926,win,5
 24 avril 1927,France - Italie,3-3,Match amical,Italie,3,3,NA,NA,1927-04-24,1927,draw,2
 22 mai 1927,France - Espagne,1-4,Match amical,Espagne,1,4,NA,NA,1927-05-22,1927,loss,3
 26 mai 1927,France - Angleterre,0-6,Match amical,Angleterre,0,6,NA,NA,1927-05-26,1927,loss,4
-12 juin 1927,Hongrie - France,13-1,Match amical,Hongrie,11,13,NA,NA,1927-06-12,1927,loss,5
+12 juin 1927,Hongrie - France,13-1,Match amical,Hongrie,1,13,NA,NA,1927-06-12,1927,loss,5
 21 février 1928,France - Irlande,4-0,Match amical,Irlande,4,0,NA,NA,1928-02-21,1928,win,1
 11 mars 1928,Suisse - France,4-3,Match amical,Suisse,3,4,NA,NA,1928-03-11,1928,loss,2
 15 avril 1928,France - Belgique,2-3,Match amical,Belgique,2,3,NA,NA,1928-04-15,1928,loss,3
@@ -534,7 +534,7 @@ Coupe du monde 1950 (Barrage)",Yougoslavie,2,3,NA,NA,1949-12-11,1949,loss,9
 26 avril 1995,France- Slovaquie,4-0,Qualifications pour l'Euro 1996,Slovaquie,4,0,NA,NA,1995-04-26,1995,win,3
 22 juillet 1995,Norvège - France,0-0,Match amical,Norvège,0,0,NA,NA,1995-07-22,1995,draw,4
 16 août 1995,France - Pologne,1-1,Qualifications pour l'Euro 1996,Pologne,1,1,NA,NA,1995-08-16,1995,draw,5
-6 septembre 1995,France - Azerbaïdjan,10-0,Qualifications pour l'Euro 1996,Azerbaïdjan,10,10,NA,NA,1995-09-06,1995,draw,6
+6 septembre 1995,France - Azerbaïdjan,10-0,Qualifications pour l'Euro 1996,Azerbaïdjan,10,0,NA,NA,1995-09-06,1995,win,6
 11 octobre 1995,Roumanie - France,1-3,Qualifications pour l'Euro 1996,Roumanie,3,1,NA,NA,1995-10-11,1995,win,7
 15 novembre 1995,France - Israël,2-0,Qualifications pour l'Euro 1996,Israël,2,0,NA,NA,1995-11-15,1995,win,8
 24 janvier 1996,France - Portugal,3-2,Match amical,Portugal,3,2,NA,NA,1996-01-24,1996,win,1
