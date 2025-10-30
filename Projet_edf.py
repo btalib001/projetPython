@@ -100,45 +100,6 @@ col1.metric("Victoires", (matches_adversaire['outcome'] == 'win').sum())
 col2.metric("Défaites", (matches_adversaire['outcome'] == 'loss').sum())
 col3.metric("Nuls", (matches_adversaire['outcome'] == 'draw').sum())
 
-# Curseurs pour simuler un score
-st.subheader("Simuler un score")
-col1, col2 = st.columns(2)
-buts_marques = col1.slider("Buts marqués par la France", 0, 10, 2)
-buts_concedes = col2.slider("Buts concédés par la France", 0, 10, 1)
-
-# Prédiction dynamique
-difference_buts = buts_marques - buts_concedes
-total_matchs = len(matches_adversaire)
-if total_matchs == 0:
-    st.warning(f"Aucun match historique contre {adversaire} entre {decade[0]} et {decade[1]}.")
-    st.stop()
-
-victoires = (matches_adversaire['outcome'] == 'win').sum()
-probabilite_base = (victoires / total_matchs) * 100
-
-# Ajustement basé sur l'écart de buts
-if difference_buts >= 3:
-    probabilite_victoire = min(99, probabilite_base + 20)
-elif difference_buts <= -3:
-    probabilite_victoire = max(1, probabilite_base - 20)
-else:
-    probabilite_victoire = probabilite_base + (difference_buts * 5)
-probabilite_victoire = max(1, min(99, probabilite_victoire))
-
-# Affichage du résultat
-st.subheader("🔮 Prédiction")
-if buts_marques > buts_concedes:
-    resultat_simule = "Victoire 🏆"
-elif buts_marques < buts_concedes:
-    resultat_simule = "Défaite 😢"
-else:
-    resultat_simule = "Match nul 🤝"
-
-st.markdown(f"""
-**Score simulé :** {buts_marques}-{buts_concedes} ({resultat_simule})
-**Probabilité de victoire :** {probabilite_victoire:.1f}% (basé sur {total_matchs} matchs entre {decade[0]} et {decade[1]})
-""")
-
 
 # --- Derniers matchs ---
 st.subheader(f"📜 Derniers matchs contre {adversaire} ({decade[0]}-{decade[1]})")
