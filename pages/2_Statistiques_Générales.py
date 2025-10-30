@@ -25,7 +25,7 @@ df_matchs.drop(columns=['X2','no'], inplace=True)
 #remplacement de draw par nul, win par victoire, loss par défaite
 df_matchs.replace({"Résultat":{"draw":"nul","win":"victoire","loss":"défaite"}}, inplace=True)
 
-# --- Barre latérale pour la décennie ---
+# Barre latérale pour la décennie
 with st.sidebar:
     st.header("🎛️ Filtres")
     decade = st.slider(
@@ -117,4 +117,5 @@ if st.sidebar.button("Télécharger les données filtrées"):
         file_name=f"matchs_france_{decade[0]}-{decade[1]}.csv",
         mime='text/csv'
     )
+
 
