@@ -36,16 +36,12 @@ with st.sidebar:
         step=10
     )
 
-# --- Filtrer les données par décennie ---
+# Filtrer les données par décennie
 df_filtered = df_matchs[(df_matchs['Année'] >= decade[0]) & (df_matchs['Année'] <= decade[1])]
 
-# --- Titre et description ---
-#st.title("🇫🇷 Analyse et Simulation des Matchs de l'Équipe de France")
-#st.markdown(f"""
-#Cette application permet d'explorer les **statistiques historiques** de l'équipe de France ({len(df_filtered)} matchs entre {decade[0]} et {decade[1]}).
-#""")
 
-# --- Section 1 : Tableau de bord général ---
+
+# Section 1 : Tableau de bord général 
 st.header("📊 Tableau de bord")
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Matchs joués", len(df_filtered))
@@ -78,7 +74,7 @@ fig_pie = px.pie(
 )
 st.plotly_chart(fig_pie, use_container_width=True)
 
-# --- Section 2 : Simulation de match ---
+# Section 2 : Résultats selon adversaire
 st.header("Choisir un adversaire")
 
 # Liste des adversaires disponibles (filtrés par décennie)
@@ -100,7 +96,7 @@ col3.metric("Nuls", (matches_adversaire['Résultat'] == 'nul').sum())
 
 
 
-# --- Derniers matchs ---
+# Derniers matchs
 st.subheader(f"📜 Derniers matchs contre {adversaire} ({decade[0]}-{decade[1]})")
 if len(matches_adversaire) > 0:
     st.dataframe(
@@ -111,7 +107,7 @@ if len(matches_adversaire) > 0:
 else:
     st.info(f"Aucun match historique disponible contre {adversaire} entre {decade[0]} et {decade[1]}.")
 
-# --- Export des données ---
+# Export des données
 st.sidebar.header("📥 Export")
 if st.sidebar.button("Télécharger les données filtrées"):
     csv = df_filtered.to_csv(index=False, sep=';').encode('utf-8')
@@ -121,3 +117,4 @@ if st.sidebar.button("Télécharger les données filtrées"):
         file_name=f"matchs_france_{decade[0]}-{decade[1]}.csv",
         mime='text/csv'
     )
+
