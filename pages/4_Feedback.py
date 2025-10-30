@@ -3,20 +3,20 @@ from supabase import create_client, Client
 import datetime
 import pandas as pd
 
-# --- Configuration de la page ---
+#Configuration de la page
 st.set_page_config(page_title="Feedback App", page_icon="💬", layout="centered")
 st.title("💬 Partagez votre avis !")
 
 url_logo = "https://raw.githubusercontent.com/btalib001/projetPython/refs/heads/main/image/Logo_F%C3%A9d%C3%A9ration_Fran%C3%A7aise_Football_2022.svg"
 st.logo(url_logo, size="large", link="https://www.fff.fr/selection/2-equipe-de-france/index.html")
 
-# --- Configuration Supabase ---
+#Configuration Supabase
 SUPABASE_URL = "https://rtbgmosauydbvtgpghzh.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0Ymdtb3NhdXlkYnZ0Z3BnaHpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NTY0NDIsImV4cCI6MjA3NzMzMjQ0Mn0.Uzox6OBxihh4h7q8dIk23D2gOpnVANlIU1sPIZfLbP0"
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-# --- Formulaire de feedback ---
+#Formulaire de feedback
 with st.form("feedback_form"):
     nom = st.text_input("Votre nom (optionnel)")
     email = st.text_input("Votre e-mail (optionnel)")
@@ -40,11 +40,12 @@ if soumettre:
         st.success("✅ Merci pour votre feedback !")
         st.balloons()
 
-# --- Affichage feedbacks ---
+# Affichage des feedbacks
 if st.checkbox("📊 Voir les feedbacks"):
     result = supabase.table("feedback_app").select("*").order("date", desc=True).execute()
     df = pd.DataFrame(result.data)
     if not df.empty:
         st.dataframe(df,hide_index=True)
     else:
+
         st.info("Aucun feedback enregistré pour l’instant 😇")
