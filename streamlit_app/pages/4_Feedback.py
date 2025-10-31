@@ -18,6 +18,11 @@ st.logo(url_logo, size="large", link="https://www.fff.fr/selection/2-equipe-de-f
 #url = st.secrets["SUPABASE_URL"]
 #key = st.secrets["SUPABASE_ANON_KEY"]
 
+#ou encore avec des Variables d'environnement
+#import os
+#SUPABASE_URL = os.getenv('SUPABASE_URL')
+#SUPABASE_KEY = os.getenv('SUPABASE_KEY')
+
 
 SUPABASE_URL = "https://rtbgmosauydbvtgpghzh.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0Ymdtb3NhdXlkYnZ0Z3BnaHpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NTY0NDIsImV4cCI6MjA3NzMzMjQ0Mn0.Uzox6OBxihh4h7q8dIk23D2gOpnVANlIU1sPIZfLbP0"
@@ -57,4 +62,5 @@ if st.checkbox("📊 Voir les feedbacks"):
     else:
 
         st.info("Aucun feedback enregistré pour l’instant 😇")
+
 
