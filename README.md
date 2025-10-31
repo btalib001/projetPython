@@ -36,8 +36,9 @@ pip install -r requirements.txt
 ```
 
 ### Lancer l'application
+
 ```bash
-streamlit run Accueil.py
+streamlit run streamlit_app/Accueil.py
 ```
 
 ## 📊 Source des Données et Limites
@@ -50,6 +51,7 @@ Pour les statistiques individuelles, les données sont issues de Wikipédia à l
 ## 📝 Auteurs
 
 Créé par : [Talib BATOU/btalib001, Antoine THEPAULT, AntoineThepault]
+
 
 
 
