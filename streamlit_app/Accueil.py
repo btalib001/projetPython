@@ -63,17 +63,6 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
     df = df.copy()
 
-    # Try to convert datetimes into a standard format (datetime, no timezone)
-    for col in df.columns:
-        if is_object_dtype(df[col]):
-            try:
-                df[col] = pd.to_datetime(df[col])
-            except Exception:
-                pass
-
-        if is_datetime64_any_dtype(df[col]):
-            df[col] = df[col].dt.tz_localize(None)
-
     modification_container = st.container()
 
     with modification_container:
@@ -124,3 +113,4 @@ st.dataframe(filter_dataframe(df_matchs),hide_index=True)
 
 st.write("Dans cette application, vous pourrez accéder à de nombreuses statistiques concernant l'équipe de France de football :fr: :soccer:")
 st.write("*Les données traitées proviennent du site data.gouv et ne concernent que la période entre 1er mai 1904 et le 26 juin 2018.*")
+
