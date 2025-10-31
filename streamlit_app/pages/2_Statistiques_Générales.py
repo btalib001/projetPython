@@ -19,9 +19,6 @@ df_matchs.rename(columns={'X4':'Match',"X5":"Score","X6":"Compétition","outcome
 #suppression des colonnes non pertinentes
 df_matchs.drop(columns=['X2','no'], inplace=True)
 
-#remplacement de URSS-France dans la colonne adversaire par URSS
-#df_matchs.replace({"adversaire":{"URSS- France":"URSS"}}, inplace=True)
-
 #remplacement de draw par nul, win par victoire, loss par défaite
 df_matchs.replace({"Résultat":{"draw":"nul","win":"victoire","loss":"défaite"}}, inplace=True)
 
@@ -117,5 +114,6 @@ if st.sidebar.button("Télécharger les données filtrées"):
         file_name=f"matchs_france_{decade[0]}-{decade[1]}.csv",
         mime='text/csv'
     )
+
 
 
