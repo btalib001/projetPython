@@ -29,14 +29,12 @@ Assurez-vous d'avoir Python (3.9+) installé sur votre système.
 
 ### Cloner et installer
 
-'''bash
 git clone https://github.com/btalib001/projetPython.git
 cd projetPython
 pip install -r requirements.txt
 
 ###🚀 Lancer l'application
 
-'''bash
 streamlit run Accueil.py
 
 ### 5. Source des Données et Limites
@@ -49,3 +47,4 @@ Pour les statistiques individuelles, les données sont issues de Wikipédia à l
 ## 📝 Auteurs
 
 Créé par : [Talib BATOU/btalib001, Antoine THEPAULT, AntoineThepault]
+
