@@ -36,9 +36,6 @@ df_matchs.rename(columns={'X4':'Match',"X5":"Score","X6":"Compétition","outcome
 #suppression des colonnes non pertinentes
 df_matchs.drop(columns=['X2','date','no'], inplace=True)
 
-#remplacement de URSS-France dans la colonne adversaire par URSS
-#df_matchs.replace({"adversaire":{"URSS- France":"URSS"}}, inplace=True)
-
 #remplacement de draw par nul, win par victoire, loss par défaite
 df_matchs.replace({"Résultat":{"draw":"nul","win":"victoire","loss":"défaite"}}, inplace=True)
 
@@ -69,7 +66,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         to_filter_columns = st.multiselect("Filtrer le datafram selon", df.columns)
         for column in to_filter_columns:
             left, right = st.columns((1, 20))
-            # Treat columns with < 10 unique values as categorical
+            
             if isinstance(df[column],pd.CategoricalDtype) or df[column].nunique() < 1000:
                 user_cat_input = right.multiselect(
                     f"Values for {column}",
@@ -113,5 +110,6 @@ st.dataframe(filter_dataframe(df_matchs),hide_index=True)
 
 st.write("Dans cette application, vous pourrez accéder à de nombreuses statistiques concernant l'équipe de France de football :fr: :soccer:")
 st.write("*Les données traitées proviennent du site data.gouv et ne concernent que la période entre 1er mai 1904 et le 26 juin 2018.*")
+
 
 
