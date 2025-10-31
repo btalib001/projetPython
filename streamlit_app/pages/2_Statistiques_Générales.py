@@ -80,7 +80,7 @@ if len(adversaires) == 0:
     st.error(f"Aucun adversaire trouvé entre {decade[0]} et {decade[1]}. Elargis la période.")
     st.stop()
 
-adversaire = st.selectbox("",adversaires)
+adversaire = st.selectbox("Adversaire",adversaires)
 
 # Filtrer les matchs contre cet adversaire (avec la décennie appliquée)
 matches_adversaire = df_filtered[df_filtered['Adversaire'] == adversaire]
@@ -98,8 +98,7 @@ st.subheader(f"📜 Derniers matchs contre {adversaire} ({decade[0]}-{decade[1]}
 if len(matches_adversaire) > 0:
     st.dataframe(
         matches_adversaire.sort_values('Année', ascending=False)[['date', 'Score France', 'Score adversaire', 'Résultat']].head(5),
-        hide_index=True,
-        use_container_width=True
+        hide_index=True
     )
 else:
     st.info(f"Aucun match historique disponible contre {adversaire} entre {decade[0]} et {decade[1]}.")
@@ -114,6 +113,7 @@ if st.sidebar.button("Télécharger les données filtrées"):
         file_name=f"matchs_france_{decade[0]}-{decade[1]}.csv",
         mime='text/csv'
     )
+
 
 
 
