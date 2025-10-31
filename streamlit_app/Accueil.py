@@ -66,7 +66,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     modification_container = st.container()
 
     with modification_container:
-        to_filter_columns = st.multiselect("Filter dataframe on", df.columns)
+        to_filter_columns = st.multiselect("Filtrer le datafram selon", df.columns)
         for column in to_filter_columns:
             left, right = st.columns((1, 20))
             # Treat columns with < 10 unique values as categorical
@@ -113,4 +113,5 @@ st.dataframe(filter_dataframe(df_matchs),hide_index=True)
 
 st.write("Dans cette application, vous pourrez accéder à de nombreuses statistiques concernant l'équipe de France de football :fr: :soccer:")
 st.write("*Les données traitées proviennent du site data.gouv et ne concernent que la période entre 1er mai 1904 et le 26 juin 2018.*")
+
 
