@@ -35,12 +35,12 @@ cd projetPython
 pip install -r requirements.txt
 ```
 
-### 🚀 Lancer l'application
+### Lancer l'application
 ```bash
 streamlit run Accueil.py
 ```
 
-### Source des Données et Limites
+## 📊 Source des Données et Limites
 
 Pour les statistiques générales, le fichier csv est disponible à l'adresse suivante: https://www.data.gouv.fr/datasets/histoire-de-lequipe-de-france-de-football/
 Les données couvrent la période entre le 1er mai 1904 et le 26 juin 2018 (non jusqu'à nos jours).
@@ -50,6 +50,7 @@ Pour les statistiques individuelles, les données sont issues de Wikipédia à l
 ## 📝 Auteurs
 
 Créé par : [Talib BATOU/btalib001, Antoine THEPAULT, AntoineThepault]
+
 
 
 
