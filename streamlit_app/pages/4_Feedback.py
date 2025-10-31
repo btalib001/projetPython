@@ -7,6 +7,11 @@ import pandas as pd
 st.set_page_config(page_title="Feedback App", page_icon="💬", layout="centered")
 st.title("💬 Partagez votre avis !")
 
+# Récupération des secrets, c'est la marche à suivre. Toujours garder les clés supabase dans les secret streamlit dans un fichier ".streamlit/secrets.toml"
+#si on voulait déployer l'app sur le cloud, on peut déclarer facilement les clés secrets dans les paramètres 
+#url = st.secrets["SUPABASE_URL"]
+#key = st.secrets["SUPABASE_ANON_KEY"]
+
 url_logo = "https://raw.githubusercontent.com/btalib001/projetPython/refs/heads/main/image/Logo_F%C3%A9d%C3%A9ration_Fran%C3%A7aise_Football_2022.svg"
 st.logo(url_logo, size="large", link="https://www.fff.fr/selection/2-equipe-de-france/index.html")
 
