@@ -7,15 +7,18 @@ import pandas as pd
 st.set_page_config(page_title="Feedback App", page_icon="💬", layout="centered")
 st.title("💬 Partagez votre avis !")
 
-# Récupération des secrets, c'est la marche à suivre. Toujours garder les clés supabase dans les secret streamlit dans un fichier ".streamlit/secrets.toml"
-#si on voulait déployer l'app sur le cloud, on peut déclarer facilement les clés secrets dans les paramètres 
-#url = st.secrets["SUPABASE_URL"]
-#key = st.secrets["SUPABASE_ANON_KEY"]
 
 url_logo = "https://raw.githubusercontent.com/btalib001/projetPython/refs/heads/main/image/Logo_F%C3%A9d%C3%A9ration_Fran%C3%A7aise_Football_2022.svg"
 st.logo(url_logo, size="large", link="https://www.fff.fr/selection/2-equipe-de-france/index.html")
 
 #Configuration Supabase
+
+# Récupération des secrets, c'est la marche à suivre. Toujours garder les clés supabase dans les secret streamlit dans un fichier ".streamlit/secrets.toml"
+#si on voulait déployer l'app sur le cloud, on peut déclarer facilement les clés secrets dans les paramètres 
+#url = st.secrets["SUPABASE_URL"]
+#key = st.secrets["SUPABASE_ANON_KEY"]
+
+
 SUPABASE_URL = "https://rtbgmosauydbvtgpghzh.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0Ymdtb3NhdXlkYnZ0Z3BnaHpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE3NTY0NDIsImV4cCI6MjA3NzMzMjQ0Mn0.Uzox6OBxihh4h7q8dIk23D2gOpnVANlIU1sPIZfLbP0"
 
@@ -54,3 +57,4 @@ if st.checkbox("📊 Voir les feedbacks"):
     else:
 
         st.info("Aucun feedback enregistré pour l’instant 😇")
+
