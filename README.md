@@ -25,7 +25,7 @@ Cette application permet d'accéder aux statistiques suivantes :
 
 ### Prérequis
 
-Assurez-vous d'avoir Python (3.9+) installé sur votre système ainsi que pip (gestionnaire de paquets Python).
+Assurez-vous d'avoir Python (3.13.9) installé sur votre système ainsi que pip (gestionnaire de paquets Python).
 
 ### Cloner et installer
 
@@ -51,6 +51,7 @@ Pour les statistiques individuelles, les données sont issues de Wikipédia à l
 ## 📝 Auteurs
 
 Créé par : [Talib BATOU/btalib001, Antoine THEPAULT, AntoineThepault]
+
 
 
 
